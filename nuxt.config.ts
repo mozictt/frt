@@ -8,6 +8,12 @@ export default defineNuxtConfig({
       tailwindcss(),
     ],
   },
+  compatibilityDate: '2025-05-15', 
+  devtools: { enabled: true },
+  devServer: {
+    port: 4000,
+    host: '0.0.0.0'
+  },
   modules: ['shadcn-nuxt', '@nuxt/icon','nuxt-highcharts'],
   shadcn: {
     /**

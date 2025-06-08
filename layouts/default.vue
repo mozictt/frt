@@ -1,9 +1,18 @@
+<script setup lang="ts">
+</script>
+
 <template>
-  <div class="grid items-start lg:flex">
-    <Sidebar />
-    <div class="w-full p-8">
-      <Header />
-      <slot />
-    </div>
-  </div>
+  <SidebarProvider>
+    <AppSidebar />
+    <SidebarInset>
+     <HeaderDash />
+      <div class="min-w-0 w-full flex-1 overflow-x-auto p-4 lg:p-6">
+        <slot />
+      </div>
+    </SidebarInset>
+  </SidebarProvider>
 </template>
+
+<style scoped>
+
+</style>
